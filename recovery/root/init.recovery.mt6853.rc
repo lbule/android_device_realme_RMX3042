@@ -1,5 +1,5 @@
-import /tee.rc
-import /trustonic.rc
+import /init.recovery.tee.rc
+import /init.recovery.trustonic.rc
 
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
@@ -81,3 +81,6 @@ on post-fs-data
     mkdir /data/vendor_de 0770 system system
     mkdir /data/vendor_de/0 0770 system system
     mkdir /data/vendor_de/0/cryptoeng 0770 system system
+
+on boot
+    start health-hal-2-1

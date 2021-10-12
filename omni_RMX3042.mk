@@ -20,14 +20,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
 	$(LOCAL_PATH)/prebuilt/dtb:dtb.img
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX3042
-PRODUCT_NAME := twrp_RMX3042
+PRODUCT_NAME := omni_RMX3042
 PRODUCT_BRAND := RealMe
 PRODUCT_MODEL := 8 5G
 PRODUCT_MANUFACTURER := RealMe
